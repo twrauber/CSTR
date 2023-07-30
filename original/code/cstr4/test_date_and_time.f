@@ -1,0 +1,16 @@
+      integer date_time(8)
+      character*10 b(3)
+      call date_and_time(b(1), b(2), b(3), date_time)
+      print *,'date_time    array values:'
+      print *,'year=',date_time(1)
+      print *,'month_of_year=',date_time(2)
+      print *,'day_of_month=',date_time(3)
+      print *,'time difference in minutes=',date_time(4)
+      print *,'hour of day=',date_time(5)
+      print *,'minutes of hour=',date_time(6)
+      print *,'seconds of minute=',date_time(7)
+      print *,'milliseconds of second=',date_time(8)
+      print *, 'DATE=',b(1)
+      print *, 'TIME=',b(2)
+      print *, 'ZONE=',b(3)
+      end

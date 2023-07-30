@@ -1,0 +1,2 @@
+#gfortran -Wall -o cstr4 cstr4.f
+gfortran -o cstr4 cstr4.f

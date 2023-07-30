@@ -1,0 +1,5 @@
+rm -f DUMP.RAW
+rm -f dump*.txt
+rm -f log.txt
+rm -f X.csv
+#rm -f cstr4

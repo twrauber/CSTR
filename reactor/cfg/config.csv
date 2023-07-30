@@ -1,0 +1,22 @@
+800			# Number of time steps						
+20			# Resolution of data dumping (every n-th step)						
+#	No dumping event mean dump always
+# Fault number in 'fault.h'
+#									
+# Timestamp			Event				State		
+# ==============================================================================================									
+100			3				1		
+  # comment 1									
+200			5				1		
+200			4				1		
+# comment 2									
+ # comment 3									
+#300			0				1		# Data dump on
+400			3				0		
+400			4				0		
+400			5				0		
+500			9				1		
+600			9				0		
+600			8				1		
+700			8				0		
+#1000			0				0		# Data dump off

@@ -1,0 +1,7 @@
+latex CSTR
+bibtex CSTR
+latex CSTR
+latex CSTR
+latex CSTR
+dvipdf -dALLOWPSTRANSPARENCY CSTR
+rm -f *.aux *.bbl *.blg *.dvi *.log

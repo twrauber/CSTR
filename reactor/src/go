@@ -1,0 +1,1 @@
+make;reactor ../cfg/config.csv  > /dev/null

@@ -1,0 +1,13 @@
+#
+T=/export/thomas/tooldiag
+HOME=/home/thomas
+TOOLDIAG_BIN_PATH=$T/src;export TOOLDIAG_BIN_PATH
+#
+# Setting the environment variables
+#
+TOOLDIAG_ROOT_DIR=$T/;export TOOLDIAG_ROOT_DIR
+TOOLDIAG_DATA_DIR=$HOME/Dropbox/software/CSTR/reactor/out/;export TOOLDIAG_DATA_DIR
+#
+PATH=$TOOLDIAG_BIN_PATH:$PATH;export PATH
+#
+export LD_LIBRARY_PATH=.:/lib:/usr/lib:/usr/local/lib:/home/thomas/usr/lib:/export/thomas/usr/local/lib:/usr/lib/libreoffice/program/:$CUDA_LIB/lib/:usr/lib/x86_64-linux-gnu:/export/thomas/tooldiag/src

@@ -1,0 +1,26 @@
+CSTR Simulator
+==============
+
+To compile the program type 'make'
+To execute type './simulator [fault file]'
+
+A set of fault files is provided in the
+directory 'faults'. All faults codes are
+in file 'Faults_code.txt'
+
+The output is saved in the 'output' directory.
+Output for Matlab is saved in 'matlab'
+directory.
+
+Options
+-------
+
+The default application solves the temperature
+and concentration formulas with Euler method.
+
+To use Runge-Kutta method to solve temperature
+and concentration formulas type 'make runge_kutta'.
+
+To use the original method to solve temperature
+and concentration formulas, used in Finch's
+simulator, type 'make original'.

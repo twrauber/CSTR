@@ -1,0 +1,18 @@
+ENTER OUTPUT FILE NAME [DEFAULT=DUMP.RAW]		dump.txt
+ENTER INTEGER SEED FOR RANDOM NUMBER GENERATOR		1234567
+ENTER DESIRED FAULT TYPE				2
+ENTER EXTENT OF FAULT (IN APPROPRIATE UNITS)		100
+ENTER FAULT DELAY [min]					20
+ENTER TIME CONSTANT [(min)-1]:				0.1
+ADD ANOTHER FAULT? [0=NO , 1=YES]			0
+ENTER TIME HORIZON FOR SIMULATION [min]			100
+PRINT INTERMEDIATE RESULTS? [1=YES/0=NO]		1
+ENTER PRINT INTERVAL [min]				1
+Dynamically change controller setpoints? [0=NO, 1=YES]	1
+Number of setpoint changes for level controller?	3
+Enter time instant [min] and value of change 1		25 1.95
+Enter time instant [min] and value of change 2		40 1.90
+Enter time instant [min] and value of change 3		60 1.85
+Number of setpoint changes for temperature controller?	2
+Enter time instant [min] and value of change 1		30 81.0
+Enter time instant [min] and value of change 2		40 82.0

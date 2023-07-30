@@ -1,0 +1,2 @@
+f2c -c cstr1.f
+gcc -o cstr  cstr1.c -lm -lf2c

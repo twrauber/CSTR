@@ -1,0 +1,15 @@
+#Simulator configuration file
+
+#Seed for random number generation
+1000
+
+#Total number of iterations
+100
+
+#Print interval
+10
+
+#Faults
+#Fault code - New value - Begin - tau
+
+##

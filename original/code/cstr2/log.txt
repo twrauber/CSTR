@@ -1,0 +1,7 @@
+ Opening protocol file 'log.txt'...
+
+
+     ***** EMERGENCY SHUTDOWN INITIATED AT 105.08 MIN 
+
+
+ Closing at TIME=    200.00  Iteration= 10000  Print output counter=     1  Time Horizon=    200.00  Delta t=  0.020

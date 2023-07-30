@@ -1,0 +1,2 @@
+gfortran -o cstr2 cstr2.f
+gfortran -o rand_deterministic rand_deterministic.f

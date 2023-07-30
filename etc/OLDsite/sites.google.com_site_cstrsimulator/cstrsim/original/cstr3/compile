@@ -1,0 +1,1 @@
+gfortran -o cstr3 cstr3.f

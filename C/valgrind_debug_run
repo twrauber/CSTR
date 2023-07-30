@@ -1,0 +1,2 @@
+#valgrind --leak-check=full --gen-suppressions=yes --show-reachable=yes --read-var-info=yes --track-origins=yes $1
+valgrind --leak-check=full --gen-suppressions=yes --show-reachable=yes --read-var-info=yes --track-origins=yes simulator < faults/fault_17.txt 

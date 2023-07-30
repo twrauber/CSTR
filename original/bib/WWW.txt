@@ -1,0 +1,69 @@
+University of Michigan Chemical Engineering Process Dynamics and Controls Open Textbook
+Chemical Process Dynamics and Controls Text
+https://controls.engin.umich.edu/wiki/index.php/Main_Page
+
+The ECOSSE Control HyperCourse
+http://www.see.ed.ac.uk/~jwp/newWork/control/hypercourse/restricted/course
+
+Arrhenius equation
+http://en.wikipedia.org/wiki/Arrhenius_equation
+Finch: (6-1), (6-2), p. 235
+Sorsa et al.: (20), p. 823
+
+
+Pascal (unit): http://en.wikipedia.org/wiki/Pascal_%28unit%29
+1 Pa = 1 N/m^2  = 1 kg/(m s^2)
+
+Volumetric flow rate: Q= dV/dt = v A
+http://en.wikipedia.org/wiki/Volumetric_flow_rate
+
+Flow coefficient
+http://en.wikipedia.org/wiki/Flow_coefficient
+
+Mass flux
+http://en.wikipedia.org/wiki/Mass_flux
+
+Discharge coefficient
+http://en.wikipedia.org/wiki/Discharge_coefficient
+
+Viscosity [centipoise (cP), 1 P = 0.1 Pa s = 1 kg/(m s)]
+http://en.wikipedia.org/wiki/Viscosity
+
+Darcy-Weisbach equation
+http://en.wikipedia.org/wiki/Darcy%E2%80%93Weisbach_equation
+
+Darcy friction factor
+http://en.wikipedia.org/wiki/Darcy_friction_factor_formulae
+
+Reynolds number
+http://en.wikipedia.org/wiki/Reynolds_number
+
+Flow Resistance for a Tube ****
+http://hyperphysics.phy-astr.gsu.edu/hbase/pfric.html
+F=(P1-P2)/R  ===> R = (P1-P2)/F
+
+Fluid Resistance !!!
+http://webpages.charter.net/griche/pt/u4s2prb.htm
+
+Dynamic pressure = 1/2 rho v^2   [Pa]
+http://en.wikipedia.org/wiki/Dynamic_pressure
+
+Hydraulic inertance I [kg/m^4]  delta_P = I * dQ/dt
+http://en.wikipedia.org/wiki/Inertance
+
+Valve Types Selection
+https://controls.engin.umich.edu/wiki/index.php/ValveTypesSelection
+
+Valve Modeling
+https://controls.engin.umich.edu/wiki/index.php/ValveModeling
+
+Microfluidics/Hydraulic resistance and capacity
+http://en.wikibooks.org/wiki/Microfluidics/Hydraulic_resistance_and_capacity
+
+Why is the unit of hydraulic impedance/resistance kilogram per second and hypermeter? kg/(m^4 s)  = Pa/(kg/s)
+http://physics.stackexchange.com/questions/21912/why-is-the-unit-of-hydraulic-impedance-resistance-kilogram-per-second-and-hyperm
+
+PipeFlow Calculations
+=====================
+Resistance coefficient K and equivalent length l/d calculation for valves and fittings
+http://www.pipeflowcalculations.com/resistancecoefficientK

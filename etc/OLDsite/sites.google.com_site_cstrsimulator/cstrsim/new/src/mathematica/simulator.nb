@@ -1,0 +1,95 @@
+v={x,y,z}
+f1[x_,y_,z_] := x+y^2+z
+f2[x_,y_,z_] := x^2+3*y
+f3[x_,y_,z_] := y+2*z^2
+F[x_,y_,z_] := {f1[x,y,z],f2[x,y,z],f3[x,y,z]}
+
+Grad[f1[x,y,z],{x,y,z}]
+Grad[f2[x,y,z],{x,y,z}]
+Grad[f3[x,y,z],{x,y,z}]
+
+J=Grad[F[x,y,z],{x,y,z}]
+J1 = Inverse[J]
+I = J.J1
+Simplify[I]
+FullSimplify[I]
+
+D[f1[x,y,z],{{x,y,z},2}] (* Hessian of f1 *)
+D[f2[x,y,z],{{x,y,z},2}] (* Hessian of f2 *)
+D[f3[x,y,z],{{x,y,z},2}] (* Hessian of f3 *)
+
+
+
+f1[h1_,h2_,h3_,h4_,h5_,Q1_,Q2_,Q3_] := Q1-Q2-Q3$
+f2[h1_,h2_,h3_,h4_,h5_,Q1_,Q2_,Q3_] := -hR-h0PU+K1*Q1+K2*Q1^2+h1
+f3[h1_,h2_,h3_,h4_,h5_,Q1_,Q2_,Q3_] := -h1+h2+KP*Q1^2
+f4[h1_,h2_,h3_,h4_,h5_,Q1_,Q2_,Q3_] := -h2+h3+KV*Q1^2
+f5[h1_,h2_,h3_,h4_,h5_,Q1_,Q2_,Q3_] := -h2+h4+KL*Q3^2
+f6[h1_,h2_,h3_,h4_,h5_,Q1_,Q2_,Q3_] := -h3+h5+KE*Q2^2
+f7[h1_,h2_,h3_,h4_,h5_,Q1_,Q2_,Q3_] := -h4+KEleak*Q3^2
+f8[h1_,h2_,h3_,h4_,h5_,Q1_,Q2_,Q3_] := -h5+KE*Q2^2
+
+F[h1_,h2_,h3_,h4_,h5_,Q1_,Q2_,Q3_] := {
+f1[h1,h2,h3,h4,h5,Q1,Q2,Q3], f2[h1,h2,h3,h4,h5,Q1,Q2,Q3],
+f3[h1,h2,h3,h4,h5,Q1,Q2,Q3], f4[h1,h2,h3,h4,h5,Q1,Q2,Q3],
+f5[h1,h2,h3,h4,h5,Q1,Q2,Q3], f6[h1,h2,h3,h4,h5,Q1,Q2,Q3],
+f7[h1,h2,h3,h4,h5,Q1,Q2,Q3], f8[h1,h2,h3,h4,h5,Q1,Q2,Q3] }
+
+J=Grad[F[h1,h2,h3,h4,h5,Q1,Q2,Q3],{h1,h2,h3,h4,h5,Q1,Q2,Q3}] (* Jacobian *)
+J1=Inverse[J]	(* Inverse Jacobian *)
+Simplify[J1]
+FullSimplify[J1]
+
+I=J.J1
+Simplify[I]
+FullSimplify[I]
+
+J1Fa=J1.F[h1,h2,h3,h4,h5,Q1,Q2,Q3]
+Simplify[J1Fa]
+J1Fa=FullSimplify[J1Fa]
+x1={h1,h2,h3,h4,h5,Q1,Q2,Q3}-J1Fa
+x1=FullSimplify[x1]
+
+
+J1FaC=CForm[x1]  (* Export to C language *)
+
+(* Export["x1.c",x1,"C"] not working *)
+
+
+H1=D[f1[h1,h2,h3,h4,h5,Q1,Q2,Q3],{{h1,h2,h3,h4,h5,Q1,Q2,Q3},2}] (* Hessian of f1 *)
+H2=D[f2[h1,h2,h3,h4,h5,Q1,Q2,Q3],{{h1,h2,h3,h4,h5,Q1,Q2,Q3},2}] (* Hessian of f2 *)
+H3=D[f3[h1,h2,h3,h4,h5,Q1,Q2,Q3],{{h1,h2,h3,h4,h5,Q1,Q2,Q3},2}] (* Hessian of f3 *)
+H4=D[f4[h1,h2,h3,h4,h5,Q1,Q2,Q3],{{h1,h2,h3,h4,h5,Q1,Q2,Q3},2}] (* Hessian of f4 *)
+H5=D[f5[h1,h2,h3,h4,h5,Q1,Q2,Q3],{{h1,h2,h3,h4,h5,Q1,Q2,Q3},2}] (* Hessian of f5 *)
+H6=D[f6[h1,h2,h3,h4,h5,Q1,Q2,Q3],{{h1,h2,h3,h4,h5,Q1,Q2,Q3},2}] (* Hessian of f6 *)
+H7=D[f7[h1,h2,h3,h4,h5,Q1,Q2,Q3],{{h1,h2,h3,h4,h5,Q1,Q2,Q3},2}] (* Hessian of f7 *)
+H8=D[f8[h1,h2,h3,h4,h5,Q1,Q2,Q3],{{h1,h2,h3,h4,h5,Q1,Q2,Q3},2}] (* Hessian of f8 *)
+
+
+(*
+https://en.wikipedia.org/wiki/Taylor_series
+
+a=x(k)
+x=x(k+1)
+
+A second-order Taylor series expansion of a scalar-valued function
+of more than one variable can be written compactly as
+f(x)=f(a) + (x-a)^T Df(a) + 0.5(x-a)^T {D²f(a)}(x-a) + ...
+
+
+dx: x(k+1)-x(k)
+
+f(x(k+1)) = f(x(k)) + dx^T J(x(k)) + 0.5 dx^T Hf(x(k)) dx + ...
+
+
+First-order approximation   fi(x) \approx P1(x) = fi(a)+[grad fi(x)]^T (x-a)
+Second-order approximation  fi(x) \approx P2(x) = fi(a)+[grad fi(x)]^T (x-a) + 0.5 fi(a)^T [Hi(x)] fi(a)
+with quadratic function Hi(x) does NOT depend on x, is constant, so
+[grad fi(x)]^T (x-a) = -fi(a) +  0.5 fi(a)^T [Hi(x)] fi(a)
+
+
+
+
+*)
+
+

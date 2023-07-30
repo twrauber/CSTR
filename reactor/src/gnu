@@ -1,0 +1,34 @@
+cd "../out"
+set style data lines
+set yrange [0:15]
+set xlabel "t [100 sec]"
+unset ytics
+set ylabel "Variables"
+set key right top outside
+set grid
+set title "Evolution of process variables"
+#set xrange [-1000:20000]
+#set xrange [300:1000]
+
+plot \
+"F0", \
+"T0", \
+"cA0", \
+"FR", \
+"TR", \
+"LM", \
+"TM", \
+"FW", \
+"FP", \
+"cA", \
+"cB", \
+"a1", \
+"a2"
+
+
+# "dt", \
+# "F", \
+# "Q", \
+# "Tout", \
+
+pause -1 "Hit return to exit...
